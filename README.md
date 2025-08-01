@@ -1,5 +1,3 @@
-# Chess-Coach-Agent
-AI agent that analyzes PGN games using Stockfish + Gemini to give personalized chess coaching.
 # ♟️ Chess Coach Agent
 
 AI-powered agent that reviews your chess games, detects blunders, and explains them like a personal coach.
@@ -11,15 +9,39 @@ Built with:
 
 ---
 
-## 📦 Features
+## Features
 
-✅ Parses `.pgn` files from Lichess, Chess.com, or manual games  
-✅ Uses Stockfish to find best move at each turn  
+✅ Parses `.pgn` files  
+✅ Uses Stockfish to find best moves  
 ✅ Detects blunders based on eval drop  
-✅ Asks Gemini to explain your mistakes in plain English  
-✅ CLI output that reads like a coach reviewing your game
+✅ Uses Gemini to explain the mistake  
 
 ---
 
-## 🧪 Example Output
+## Setup
 
+1. Clone the repo:
+```bash
+git clone https://github.com/your_username/chess-coach-agent
+cd chess-coach-agent
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Install [Stockfish](https://stockfishchess.org/download/) and ensure it's in your PATH.
+
+4. Add `.env` file with:
+```
+GEMINI_API_KEY=your-key-here
+```
+
+---
+
+## Run
+
+```bash
+python analyze_game.py your_game.pgn
+```
